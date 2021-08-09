@@ -1,17 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/index.module.scss'
+import { Text } from '../components/Typography/Text'
+import { TitlePrimary, TitleSecondary } from '../components/Typography/Title'
+import { ButtonPrimary } from '../components/ButtonPrimary'
 
 export default function Home() {
   return (
-    <>
-    <Head>
-      <title>Portfolio v2</title>
-    </Head>
     <div className={styles.container}>
-      <h1 className={styles.title}>Portfolio</h1>
-      <p className={styles.fonttest}>PacaeimbuVari</p>
+      <div className={styles.heading}>
+        <TitlePrimary>Hey, I'm Leopold.</TitlePrimary>
+        <Text>I love create and build web applications. I am a javascript specialist and I am open to work.</Text>
+        <ButtonPrimary>Resume</ButtonPrimary>
+      </div>
+      <section>
+        <div className={styles.articles_section}>
+          <TitleSecondary>Articles</TitleSecondary>
+        </div>
+        <div className={styles.projects_section}>
+          <TitleSecondary>Projects</TitleSecondary>
+        </div>
+      </section>
     </div>
-    </>
   )
 }

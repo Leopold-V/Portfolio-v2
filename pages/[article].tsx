@@ -1,6 +1,6 @@
 function Article({article}: { article: string}) {
 
-    return <div>Loading...</div>
+    return <div>blabla</div>
 }
 
 /*
