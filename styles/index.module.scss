@@ -1,4 +1,30 @@
+.articles_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .heading {
     margin-top: 7rem;
     text-align: center;
+}
+
+.article_title {
+    align-self: flex-start;
+}
+
+.btn_more {
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    padding: .375rem .5rem;
+    cursor: pointer;
+    box-shadow: var(--primary-shadow);
+    transition: all .3s;
+    &:hover {
+        background-color: var(--primary-color-hover);
+        color: var(--primary-color-text);
+    }
 }
