@@ -28,9 +28,6 @@
     cursor: pointer;
     transition: all .3s;
     position: relative;
-    &:hover {
-
-    }
     &::after {
         content: '';
         position: absolute;

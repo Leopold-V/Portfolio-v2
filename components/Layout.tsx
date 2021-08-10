@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import styles from '../styles/Layout.module.scss';
+import styles from '../styles/layout.module.scss';
 
 export const Layout = ({ children }: { children: ReactNode}) => {
     return (
