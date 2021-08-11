@@ -1,4 +1,4 @@
-import styles from '../styles/index.module.scss';
+import styles from '../styles/pages/index.module.scss';
 import Link from 'next/link';
 import projects from '../public/projects.json';
 import { projectType } from '../types';

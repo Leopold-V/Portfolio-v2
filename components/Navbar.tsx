@@ -8,9 +8,9 @@ export const Navbar = () => {
             <div className={styles.navblock}>
                 <div className={styles.logo}><h1><Link href='/'>LV</Link></h1></div>
                 <ul className={styles.navlist}>
-                    <li className={styles.navitem}><Link href='/'>Home</Link></li>
-                    <li className={styles.navitem}><Link href='/articles'>Articles</Link></li>
-                    <li className={styles.navitem}><Link href='/projects'>Projects</Link></li>
+                    <li><Link href='/'><a className={styles.navitem}>Home</a></Link></li>
+                    <li><Link href='/articles'><a className={styles.navitem}>Articles</a></Link></li>
+                    <li><Link href='/projects'><a className={styles.navitem}>Projects</a></Link></li>
                 </ul>
             </div>
             <button className={styles.btn}>

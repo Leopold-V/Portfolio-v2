@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../styles/articles.module.scss';
+import styles from '../styles/pages/articles.module.scss';
 import { CardArticle } from '../components/CardArticle';
 import { Searchbar } from '../components/Searchbar';
 import { TitleSecondary } from '../components/Typography/Title';
