@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/cardproject.module.scss';
+import { projectType } from '../types';
 import { Text } from './Typography/Text';
 import { TitleTertiary } from './Typography/Title';
 
-export const CardProject = ({ project }: { project: any}) => {
+export const CardProject = ({ project }: { project: projectType}) => {
     return (
         <li>
             <Link href={project.link || project.github}>

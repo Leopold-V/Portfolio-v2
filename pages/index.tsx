@@ -1,13 +1,14 @@
 import styles from '../styles/index.module.scss';
 import Link from 'next/link';
+import projects from '../public/projects.json';
+import { projectType } from '../types';
 import { Text } from '../components/Typography/Text';
 import { TitlePrimary, TitleSecondary } from '../components/Typography/Title';
 import { ButtonPrimary } from '../components/ButtonPrimary';
 import { CardArticle } from '../components/CardArticle';
-import projects from '../public/projects.json';
 import { CardProject } from '../components/CardProject';
 
-export default function Home({ articles, projectsList }: { articles: any, projectsList: any }) {
+export default function Home({ articles, projectsList }: { articles: any, projectsList: projectType[] }) {
 
   return (
     <div className={styles.container}>
@@ -31,7 +32,7 @@ export default function Home({ articles, projectsList }: { articles: any, projec
             <TitleSecondary>Projects</TitleSecondary>
           </div>
           {<ul className={styles.list_wrapper}>
-            {projectsList.map((project: any) => <CardProject key={project.title} project={project} />)}
+            {projectsList.map((project: projectType) => <CardProject key={project.title} project={project} />)}
           </ul>}
           <Link href='/projects'><a className={styles.btn_more}>More projects...</a></Link>
         </div>
