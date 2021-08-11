@@ -15,7 +15,11 @@ export default function Home({ articles, projectsList }: { articles: any, projec
       <div className={styles.heading}>
         <TitlePrimary>Hey, I'm Leopold.</TitlePrimary>
         <Text>I love create and build web applications. I am a javascript specialist and I am open to work.</Text>
-        <ButtonPrimary>Resume</ButtonPrimary>
+        <ButtonPrimary href='CV_Leopold.pdf'>Resume</ButtonPrimary>
+        <ul className={styles.list_network}>
+          <li><a className="fa fa-github fa-2x" href="https://github.com/Leopold-V"></a></li>
+          <li><a className="fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/léopold-vertadier-953144162"></a></li>
+        </ul>
       </div>
       <section>
         <div className={styles.content_section}>

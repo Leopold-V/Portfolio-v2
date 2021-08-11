@@ -47,3 +47,20 @@
 .list_wrapper {
     width: 100%;
 }
+
+.list_network {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 1rem 0rem;
+    & a {
+        margin: 0rem .3rem;
+        border-radius: 50%;
+        transition: all .5s;
+        &:hover {
+          transform: rotate(360deg);
+        }
+    }
+}
