@@ -9,10 +9,11 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <meta
+          <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
+          <script src='https://kit.fontawesome.com/a52257a244.js'></script>
         <Head>
           <meta charSet="utf-8" />
         </Head>

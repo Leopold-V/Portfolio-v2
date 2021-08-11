@@ -1,11 +1,13 @@
-import styles from '../styles/index.module.scss'
-import Link from 'next/link'
-import { Text } from '../components/Typography/Text'
-import { TitlePrimary, TitleSecondary } from '../components/Typography/Title'
-import { ButtonPrimary } from '../components/ButtonPrimary'
-import { CardArticle } from '../components/CardArticle'
+import styles from '../styles/index.module.scss';
+import Link from 'next/link';
+import { Text } from '../components/Typography/Text';
+import { TitlePrimary, TitleSecondary } from '../components/Typography/Title';
+import { ButtonPrimary } from '../components/ButtonPrimary';
+import { CardArticle } from '../components/CardArticle';
+import projects from '../public/projects.json';
+import { CardProject } from '../components/CardProject';
 
-export default function Home({ articles }: { articles: any}) {
+export default function Home({ articles, projectsList }: { articles: any, projectsList: any }) {
 
   return (
     <div className={styles.container}>
@@ -15,17 +17,23 @@ export default function Home({ articles }: { articles: any}) {
         <ButtonPrimary>Resume</ButtonPrimary>
       </div>
       <section>
-        <div className={styles.articles_section}>
+        <div className={styles.content_section}>
           <div className={styles.article_title}>
             <TitleSecondary>Articles</TitleSecondary>
           </div>
           {articles.error === null && 
-            <ul>{articles.data.map((art: any) => <CardArticle key={art.id} article={art} />)}</ul>
+            <ul className={styles.list_wrapper}>{articles.data.map((art: any) => <CardArticle key={art.id} article={art} />)}</ul>
           }
-          <Link href='/Articles'><a className={styles.btn_more}>More articles...</a></Link>
+          <Link href='/articles'><a className={styles.btn_more}>More articles...</a></Link>
         </div>
-        <div className={styles.projects_section}>
-          <TitleSecondary>Projects</TitleSecondary>
+        <div className={styles.content_section}>
+          <div className={styles.projects_title}>
+            <TitleSecondary>Projects</TitleSecondary>
+          </div>
+          {<ul className={styles.list_wrapper}>
+            {projectsList.map((project: any) => <CardProject key={project.title} project={project} />)}
+          </ul>}
+          <Link href='/projects'><a className={styles.btn_more}>More projects...</a></Link>
         </div>
       </section>
     </div>
@@ -37,11 +45,14 @@ export async function getStaticProps(context: any) {
   const response = await fetch('http://localhost:3000/api/article');
   const json = await response.json();
   const articleSorted = {error: json.error, data: json.data.sort((a: any, b: any) => b.positive_reactions_count - a.positive_reactions_count)};
-  articleSorted.data.length = 3;
+  articleSorted.data.length = 2;
+
+  projects.length = 2;
 
   return {
       props: {
-          articles: articleSorted
+          articles: articleSorted,
+          projectsList: projects
       }
   }
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../styles/navbar.module.scss';
 import Link from 'next/link'
-import { TitlePrimary } from './Typography/Title';
 
 export const Navbar = () => {
     return (
@@ -10,8 +9,8 @@ export const Navbar = () => {
                 <div className={styles.logo}><h1><Link href='/'>LV</Link></h1></div>
                 <ul className={styles.navlist}>
                     <li className={styles.navitem}><Link href='/'>Home</Link></li>
-                    <li className={styles.navitem}><Link href='/Articles'>Articles</Link></li>
-                    <li className={styles.navitem}><Link href='/Projects'>Projects</Link></li>
+                    <li className={styles.navitem}><Link href='/articles'>Articles</Link></li>
+                    <li className={styles.navitem}><Link href='/projects'>Projects</Link></li>
                 </ul>
             </div>
             <button className={styles.btn}>

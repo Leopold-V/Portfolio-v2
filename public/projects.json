@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Reactirator",
+        "description": "An open source application to generate a react application, with packages installation and configuration automatized",
+        "tech": "React.js, electron, node.js, tailwindcss",
+        "github": "https://github.com/Leopold-V/Reactirator",
+        "link": null
+    },
+    {
+        "title": "js-maydev",
+        "description": "A react application for javascript related problems and posts.",
+        "tech": "React.js, Firebase, tailwindcss",
+        "github": "https://github.com/Leopold-V/js-maydev",
+        "link": "https://js-maydev.vercel.app/"
+    },
+    {
+        "title": "Website for the game age of empire 3",
+        "description": "I built this website for the famous game : Age of empire and his community, it is aiming to help players to learn and improve at the game. I am still running this website at this moment.",
+        "tech": "Next.js, Strapi, MongoDB",
+        "link": "https://aoe3strategy.com",
+        "github": "https://github.com/Leopold-V/aoe3strategy"
+    }
+]
