@@ -1,10 +1,50 @@
 .container {
-    margin: 1rem 0;
+    margin-bottom: 2rem;
     display: flex;
 }
 
-.content {
-    width: 50%;
-    align-self: flex-end;
-    padding: 1rem;
+.image {
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all .3s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
+
+.content {
+    width: 40%;
+    padding: 1rem;
+    text-align: center;
+    & h3 {
+        color: var(--color-hover-text);
+    }
+}
+
+.tech {
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+}
+
+.group_button {
+    margin: 1rem 0;
+    & > a {
+        margin: .3rem;
+        & > svg {
+            transition: all .3s;
+            &:hover {
+                transform: rotateZ(360deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+    .content {
+        width: 100%;
+    }
+  }

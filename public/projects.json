@@ -3,6 +3,7 @@
         "title": "Reactirator",
         "description": "An open source application to generate a react application, with packages installation and configuration automatized",
         "tech": "React.js, electron, node.js, tailwindcss",
+        "repo_name": "Reactirator",
         "github": "https://github.com/Leopold-V/Reactirator",
         "link": null,
         "screen": "https://i.gyazo.com/f89d7d3d26c6fd45f37472602e599293.png"
@@ -11,16 +12,27 @@
         "title": "js-maydev",
         "description": "A react application for javascript related problems and posts.",
         "tech": "React.js, Firebase, tailwindcss",
+        "repo_name": "js-maydev",
         "github": "https://github.com/Leopold-V/js-maydev",
         "link": "https://js-maydev.vercel.app/",
         "screen": "https://i.gyazo.com/760c25e77c749db966d6ab755151df10.png"
     },
     {
-        "title": "Website for the game age of empire 3",
+        "title": "Website for the game Age of empire 3",
         "description": "I built this website for the famous game : Age of empire and his community, it is aiming to help players to learn and improve at the game. I am still running this website at this moment.",
-        "tech": "Next.js, Strapi, MongoDB",
+        "tech": "Next.js, Strapi, MongoDB, styled-components",
+        "repo_name": "aoe3strategy",
         "link": "https://aoe3strategy.com",
         "github": "https://github.com/Leopold-V/aoe3strategy",
         "screen": "https://i.gyazo.com/aacddd5450e190cdbbe2430da4b33864.jpg"
+    },
+    {
+        "title": "Project management app",
+        "description": "Track and manage your solo side-project progression. With markdown todolists project Generation.",
+        "tech": "React.js, Firebase, styled-components",
+        "repo_name": "project-management",
+        "link": "https://relaxed-shockley-e35f75.netlify.app/",
+        "github": "https://github.com/Leopold-V/project-management",
+        "screen": "https://i.gyazo.com/ff948a678d97872dbde1a65443b5cf4e.png"
     }
 ]

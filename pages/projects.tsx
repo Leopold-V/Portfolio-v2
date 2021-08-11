@@ -10,7 +10,13 @@ const projects = () => {
         <div className={styles.container}>
             <TitleSecondary>Projects</TitleSecondary>
             {<ul className={styles.list_wrapper}>
-            {projectsList.map((project: projectType) => <ProjectPresentation key={project.title} project={project} />)}
+            {projectsList.map((project: projectType, i) => {
+                if (i % 2 === 0) {
+                    return <ProjectPresentation key={project.title} project={project} />
+                } else {
+                    return <ProjectPresentation key={project.title} project={project} reverse />
+                }
+            })}
           </ul>}
         </div>
     )
