@@ -13,8 +13,11 @@ export default function Home({ articles, projectsList }: { articles: any, projec
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
-        <TitlePrimary>Hey, I'm Leopold.</TitlePrimary>
-        <Text>I love create and build web applications. I am a javascript specialist and I am open to work.</Text>
+        <TitlePrimary>Hey, I'm Leopold. 👋</TitlePrimary>
+        <Text>
+        I am a <strong>fullstack developper.</strong> I love create and build web applications.
+          My main expertises are in Javascript technologies : <strong>React, Node, electron...</strong>
+        </Text>
         <ButtonPrimary href='CV_Leopold.pdf'>Resume</ButtonPrimary>
         <ul className={styles.list_network}>
           <li><a className="fa fa-github fa-2x" href="https://github.com/Leopold-V"></a></li>

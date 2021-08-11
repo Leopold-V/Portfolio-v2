@@ -17,6 +17,10 @@
 .heading {
     margin-top: 7rem;
     text-align: center;
+    & > a {
+        display: inline-block;
+        margin: 1rem 0;
+    }
 }
 
 .article_title {
