@@ -81,7 +81,7 @@ export async function getStaticProps(context: any) {
   const articleSorted = {
     data: json.sort((a: any, b: any) => b.positive_reactions_count - a.positive_reactions_count),
   };
-  
+
   articleSorted.data.length = 2;
   projects.length = 2;
 
