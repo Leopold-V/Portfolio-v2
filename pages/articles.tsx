@@ -29,7 +29,7 @@ const articles = ({ articles }: { articles: any }) => {
 };
 
 export async function getStaticProps(context: any) {
-  const response = await fetch('http://localhost:3000/api/article');
+  const response = await fetch('https://localhost:3000/api/article');
   const json = await response.json();
   const articleSorted = {
     error: json.error,

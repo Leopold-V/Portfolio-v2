@@ -6,14 +6,14 @@ import { Text } from './Typography/Text';
 import { TitleTertiary } from './Typography/Title';
 
 export const CardArticle = ({ article }: { article: any }) => {
-  //@ts-ignore
-  const { value } = useTheme();
+
+  const theme = useTheme();
 
   return (
     <li className={styles.wrapper}>
       <Link href={article.url}>
         <a>
-          <div className={`${styles.container} ${value === 'dark' ? styles.dark : ''}`}>
+          <div className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}>
             <TitleTertiary>{article.title}</TitleTertiary>
             <p className={styles.date}>{article.readable_publish_date}</p>
             <Text>{article.description}</Text>

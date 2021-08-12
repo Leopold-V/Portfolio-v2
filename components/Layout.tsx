@@ -5,11 +5,10 @@ import { Footer } from './Footer';
 import { Navbar } from './Navbar';
 
 export const Layout = ({ children }: { children: ReactNode }) => {
-  //@ts-ignore
-  const { value } = useTheme();
+  const theme = useTheme();
 
   return (
-    <div className={`${value === 'dark' ? 'dark' : 'light'}`}>
+    <div className={`${theme?.value === 'dark' ? 'dark' : 'light'}`}>
       <div className={styles.container}>
         <Navbar />
         {children}

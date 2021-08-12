@@ -7,14 +7,14 @@ import { Text } from './Typography/Text';
 import { TitleTertiary } from './Typography/Title';
 
 export const CardProject = ({ project }: { project: projectType }) => {
-  //@ts-ignore
-  const { value } = useTheme();
+
+  const theme = useTheme();
 
   return (
     <li>
       <Link href={project.link || project.github}>
         <a>
-          <div className={`${styles.container} ${value === 'dark' ? styles.dark : ''}`}>
+          <div className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}>
             <TitleTertiary>{project.title}</TitleTertiary>
             <Text>{project.description}</Text>
             <div className={styles.tech}>{project.tech}</div>

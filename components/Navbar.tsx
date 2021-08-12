@@ -4,16 +4,15 @@ import Link from 'next/link';
 import { useTheme } from './context/Theme';
 
 export const Navbar = () => {
-  //@ts-ignore
-  const { value, setValue } = useTheme();
+  const theme = useTheme();
 
   const handleTheme = () => {
-    if (value === 'light') {
+    if (theme?.value === 'light') {
       localStorage.setItem('theme', 'dark');
-      setValue('dark');
+      theme?.setValue('dark');
     } else {
       localStorage.setItem('theme', 'light');
-      setValue('light');
+      theme?.setValue('light');
     }
   };
 
