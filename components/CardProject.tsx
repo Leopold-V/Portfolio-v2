@@ -20,11 +20,10 @@ export const CardProject = ({ project }: { project: projectType }) => {
             <div className={styles.github}>
               <iframe
                 src={`https://ghbtns.com/github-btn.html?user=leopold-v&repo=${project.repo_name}&type=star&count=true`}
-                scrolling="0"
-                frameBorder="0"
                 width="80"
                 height="20"
                 title="GitHub"
+                style={{ border: 'none', overflow: 'none' }}
               ></iframe>
             </div>
           </div>

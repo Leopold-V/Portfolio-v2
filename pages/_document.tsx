@@ -8,14 +8,18 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
-        />
-        <script src="https://kit.fontawesome.com/a52257a244.js"></script>
+      <Html lang="en" dir="ltr">
         <Head>
-          <meta charSet="utf-8" />
+          <meta name="Description" content="This is my portfolio website" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://portfolio-v2-ashy.vercel.app/" />
+          <meta property="og:title" content="Leopold Portfolio" />
+          <meta
+            property="og:image"
+            content="https://i.gyazo.com/62cb16bcd8fd4932844b745215aa35ec.png"
+          ></meta>
+          <meta property="og:description" content="This is my portfolio website" />
+          <script src="https://kit.fontawesome.com/a52257a244.js"></script>
         </Head>
         <body>
           <Main />

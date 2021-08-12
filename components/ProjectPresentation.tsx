@@ -36,10 +36,10 @@ export const ProjectPresentation = ({
             <iframe
               src={`https://ghbtns.com/github-btn.html?user=leopold-v&repo=${project.repo_name}&type=star&count=true`}
               scrolling="0"
-              frameBorder="0"
               width="80"
               height="20"
               title="GitHub"
+              style={{ border: 'none', overflow: 'none' }}
             ></iframe>
             {project.link && (
               <Link href={project.link}>

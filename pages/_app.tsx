@@ -9,6 +9,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider>
       <Layout>
         <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
+          />
           <title>Portfolio v2</title>
         </Head>
         <Component {...pageProps} />

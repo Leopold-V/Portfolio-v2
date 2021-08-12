@@ -15,8 +15,6 @@ export default function Home({
   articles: any;
   projectsList: projectType[];
 }) {
-  console.log(articles);
-
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
