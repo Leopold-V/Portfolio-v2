@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, FormEvent } from 'react';
+import React, { useRef, FormEvent } from 'react';
 import styles from '../styles/searchbar.module.scss';
 
 export const Searchbar = ({ search }: { search: any }) => {
@@ -9,11 +9,6 @@ export const Searchbar = ({ search }: { search: any }) => {
     //@ts-ignore
     search(ref_input.current.value);
   };
-
-  useEffect(() => {
-    //@ts-ignore
-    ref_input.current.focus();
-  }, []);
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>

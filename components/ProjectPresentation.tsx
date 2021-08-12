@@ -39,7 +39,7 @@ export const ProjectPresentation = ({
               width="80"
               height="20"
               title="GitHub"
-              style={{ border: 'none', overflow: 'none' }}
+              style={{ border: 'none', overflow: 'hidden' }}
             ></iframe>
             {project.link && (
               <Link href={project.link}>

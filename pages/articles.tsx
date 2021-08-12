@@ -9,7 +9,7 @@ const articles = ({ articles }: { articles: any }) => {
 
   const handleSearch = (input: string) => {
     setArticlesFilter(
-      articles.filter((art: any) => art.title.toLowerCase().match(input.toLowerCase()))
+      articles.data.filter((art: any) => art.title.toLowerCase().match(input.toLowerCase()))
     );
   };
 

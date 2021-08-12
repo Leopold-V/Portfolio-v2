@@ -23,7 +23,7 @@ export const CardProject = ({ project }: { project: projectType }) => {
                 width="80"
                 height="20"
                 title="GitHub"
-                style={{ border: 'none', overflow: 'none' }}
+                style={{ border: 'none', overflow: 'hidden' }}
               ></iframe>
             </div>
           </div>

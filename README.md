@@ -3,5 +3,4 @@
 
 fix :
 
-- remove focus
-- search is broken
+- button dark mode overflow on small phone

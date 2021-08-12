@@ -57,3 +57,13 @@
     color: var(--primary-color-text);
   }
 }
+
+@media (max-width: 800px) {
+  .navitem {
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+  }
+  .btn {
+    margin: 0 0.5rem;
+  }
+}
