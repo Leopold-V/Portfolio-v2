@@ -15,6 +15,8 @@ export default function Home({
   articles: any;
   projectsList: projectType[];
 }) {
+  console.log(articles);
+
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
@@ -41,7 +43,7 @@ export default function Home({
           <div className={styles.article_title}>
             <TitleSecondary>Articles</TitleSecondary>
           </div>
-          {articles.error === null && (
+          {articles && (
             <ul className={styles.list_wrapper}>
               {articles.data.map((art: any) => (
                 <CardArticle key={art.id} article={art} />
