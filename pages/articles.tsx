@@ -9,7 +9,7 @@ const articles = ({ articles }: { articles: any }) => {
 
   const handleSearch = (input: string) => {
     setArticlesFilter(
-      articles.data.filter((art: any) => art.title.toLowerCase().match(input.toLowerCase()))
+      articles.filter((art: any) => art.title.toLowerCase().match(input.toLowerCase()))
     );
   };
 
@@ -17,7 +17,7 @@ const articles = ({ articles }: { articles: any }) => {
     <div className={styles.container}>
       <TitleSecondary>Articles</TitleSecondary>
       <Searchbar search={handleSearch} />
-      {articles.error === null && (
+      {articles && (
         <ul className={styles.list_wrapper}>
           {articlesFilter.map((art: any) => (
             <CardArticle key={art.id} article={art} />
@@ -29,13 +29,13 @@ const articles = ({ articles }: { articles: any }) => {
 };
 
 export async function getStaticProps(context: any) {
-  const response = await fetch('https://localhost:3000/api/article');
+  const BASE_URL = 'https://dev.to/api/articles?username=leopold';
+
+  const response = await fetch(BASE_URL);
   const json = await response.json();
+
   const articleSorted = {
-    error: json.error,
-    data: json.data.sort(
-      (a: any, b: any) => b.positive_reactions_count - a.positive_reactions_count
-    ),
+    data: json.sort((a: any, b: any) => b.positive_reactions_count - a.positive_reactions_count),
   };
 
   return {

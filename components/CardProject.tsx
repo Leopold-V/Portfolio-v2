@@ -7,7 +7,6 @@ import { Text } from './Typography/Text';
 import { TitleTertiary } from './Typography/Title';
 
 export const CardProject = ({ project }: { project: projectType }) => {
-
   const theme = useTheme();
 
   return (

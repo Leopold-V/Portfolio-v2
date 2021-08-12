@@ -6,7 +6,6 @@ import { Text } from './Typography/Text';
 import { TitleTertiary } from './Typography/Title';
 
 export const CardArticle = ({ article }: { article: any }) => {
-
   const theme = useTheme();
 
   return (

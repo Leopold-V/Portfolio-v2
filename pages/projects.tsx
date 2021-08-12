@@ -5,7 +5,7 @@ import { projectType } from '../types';
 import { TitleSecondary } from '../components/Typography/Title';
 import { ProjectPresentation } from '../components/ProjectPresentation';
 
-const projects = () => {
+const projects = ({ projectsList }: { projectsList: projectType[] }) => {
   return (
     <div className={styles.container}>
       <TitleSecondary>Projects</TitleSecondary>
@@ -23,5 +23,13 @@ const projects = () => {
     </div>
   );
 };
+
+export async function getStaticProps(context: any) {
+  return {
+    props: {
+      projectsList: projectsList,
+    },
+  };
+}
 
 export default projects;
