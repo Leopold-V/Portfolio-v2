@@ -1,3 +1,2 @@
-- night mode
 - scss weird loading sometimes
 - svg animation

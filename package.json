@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --config .prettierrc --write .",
-    "prettier:check": "prettier --config .prettierrc  --check"
+    "prettier:check": "prettier --config .prettierrc  --check ."
   },
   "dependencies": {
     "next": "11.0.1",
