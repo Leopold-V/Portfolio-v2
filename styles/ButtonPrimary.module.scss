@@ -1,15 +1,15 @@
 .btn {
-    background-color: var(--primary-color);
-    color: var(--color-hover-text);
-    font-weight: 700;
-    border: none;
-    border-radius: 5px;
-    padding: .5em 1.5em;
-    transition: all .3s;
-    line-height: 1.5;
-    font-size: 1rem;
-    cursor: pointer;
-    &:hover {
-        background-color: var(--primary-color-hover);
-    }
+  background-color: var(--primary-color);
+  color: var(--color-hover-text);
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1.5em;
+  transition: all 0.3s;
+  line-height: 1.5;
+  font-size: 1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--primary-color-hover);
+  }
 }

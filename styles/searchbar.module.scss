@@ -1,49 +1,49 @@
 .input {
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    width: 100%;
-    padding: 1rem 4.5rem 1rem 1.4rem;
-    box-shadow: 0 0 2px rgba(0,0,0,.2);
-    font-size: 1rem;
-    transition: all .2s;
-    &:focus {
-        box-shadow: 0 2px 4px rgba(0,0,0,.2);
-        transform: translateY(-4px);
-        & ~ button {
-            transform: translate(-30%, -60%);
-        }
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  padding: 1rem 4.5rem 1rem 1.4rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  transition: all 0.2s;
+  &:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    & ~ button {
+      transform: translate(-30%, -60%);
     }
+  }
 }
 
 .btn {
-    position: absolute;
-    background-color: var(--primary-color);
-    top: 50%;
-    right: 0;
-    transform: translate(-30%, -50%);
-    color: var(--primary-color-text);
-    padding: .6rem .8rem;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: .2rem .3rem .8rem rgba(191, 253, 231,.5);
-    cursor: pointer;
-    transition: all .2s;
-    &:hover {
-        background-color: #bffde7;
-        box-shadow: .2rem .3rem .8rem rgba(191, 253, 231,.5);
-    }
+  position: absolute;
+  background-color: var(--primary-color);
+  top: 50%;
+  right: 0;
+  transform: translate(-30%, -50%);
+  color: var(--primary-color-text);
+  padding: 0.6rem 0.8rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0.2rem 0.3rem 0.8rem rgba(191, 253, 231, 0.5);
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: #bffde7;
+    box-shadow: 0.2rem 0.3rem 0.8rem rgba(191, 253, 231, 0.5);
+  }
 }
 
 .form {
-    position: relative;
-    width: 50%;
-    margin: 2rem 0;
+  position: relative;
+  width: 50%;
+  margin: 2rem 0;
 }
 
 @media (max-width: 800px) {
-    .form {
-     width: 100%;
-    }
+  .form {
+    width: 100%;
   }
+}

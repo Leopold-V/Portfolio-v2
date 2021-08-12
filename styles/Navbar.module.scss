@@ -1,60 +1,59 @@
 .container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
 }
 
 .logo {
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
 
 .navblock {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navlist {
-    display: flex;
+  display: flex;
 }
 
 .navitem {
-    font-size: 1rem;
-    padding: .7em 0rem;
-    margin: 0 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .3s;
-    position: relative;
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 4px;
-        background: var(--primary-color);
-        transition: all .3s;
-    }
-    &:hover::after {
-        width: 100%;
-    }
-
+  font-size: 1rem;
+  padding: 0.7em 0rem;
+  margin: 0 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--primary-color);
+    transition: all 0.3s;
+  }
+  &:hover::after {
+    width: 100%;
+  }
 }
 
 .btn {
-    background: white;
-    border: none;
-    border-radius: 5px;
-    transition: all .3s;
-    padding: .375rem .5rem;
-    display: inline-flex;
-    margin: 0 1rem;
-    cursor: pointer;
-    box-shadow: var(--primary-shadow);
-    &:hover {
-        background-color: var(--primary-color-hover);
-        color: var(--primary-color-text);
-    }
+  background: white;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  padding: 0.375rem 0.5rem;
+  display: inline-flex;
+  margin: 0 1rem;
+  cursor: pointer;
+  box-shadow: var(--primary-shadow);
+  &:hover {
+    background-color: var(--primary-color-hover);
+    color: var(--primary-color-text);
+  }
 }

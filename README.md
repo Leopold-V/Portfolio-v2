@@ -1,3 +1,3 @@
-- github api stars count
-- project page
 - night mode
+- scss weird loading sometimes
+- svg animation
