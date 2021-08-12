@@ -2,6 +2,7 @@
 build
 coverage
 .next
+next-env.d.ts
 
 # Ignore all HTML files:
 *.html
