@@ -73,16 +73,16 @@ export default function Home({
 }
 
 export async function getStaticProps(context: any) {
-  const response = await fetch('http://localhost:3000/api/article');
-  const json = await response.json();
-  const articleSorted = {
-    error: json.error,
-    data: json.data.sort(
-      (a: any, b: any) => b.positive_reactions_count - a.positive_reactions_count
-    ),
-  };
-  articleSorted.data.length = 2;
+  const BASE_URL = 'https://dev.to/api/articles?username=leopold';
 
+  const response = await fetch(BASE_URL);
+  const json = await response.json();
+
+  const articleSorted = {
+    data: json.sort((a: any, b: any) => b.positive_reactions_count - a.positive_reactions_count),
+  };
+  
+  articleSorted.data.length = 2;
   projects.length = 2;
 
   return {
