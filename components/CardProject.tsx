@@ -3,8 +3,8 @@ import React from 'react';
 import styles from '../styles/cardproject.module.scss';
 import { projectType } from '../types';
 import { useTheme } from './context/Theme';
-import { Text } from './typography/Text';
-import { TitleTertiary } from './typography/Title';
+import { Text } from './Typography/Text';
+import { TitleTertiary } from './Typography/Title';
 
 export const CardProject = ({ project }: { project: projectType }) => {
   //@ts-ignore

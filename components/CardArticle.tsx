@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/cardarticle.module.scss';
 import { useTheme } from './context/Theme';
-import { Text } from './typography/Text';
-import { TitleTertiary } from './typography/Title';
+import { Text } from './Typography/Text';
+import { TitleTertiary } from './Typography/Title';
 
 export const CardArticle = ({ article }: { article: any }) => {
   //@ts-ignore

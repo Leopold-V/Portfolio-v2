@@ -3,8 +3,8 @@ import styles from '../styles/projectpresentation.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projectType } from '../types';
-import { TitleTertiary } from './typography/Title';
-import { Text } from './typography/Text';
+import { TitleTertiary } from './Typography/Title';
+import { Text } from './Typography/Text';
 
 export const ProjectPresentation = ({
   project,
