@@ -1,15 +1,19 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/cardarticle.module.scss';
-import { Text } from './Typography/Text';
-import { TitleTertiary } from './Typography/Title';
+import { useTheme } from './context/Theme';
+import { Text } from './typography/Text';
+import { TitleTertiary } from './typography/Title';
 
 export const CardArticle = ({ article }: { article: any }) => {
+  //@ts-ignore
+  const { value } = useTheme();
+
   return (
     <li className={styles.wrapper}>
       <Link href={article.url}>
         <a>
-          <div className={styles.container}>
+          <div className={`${styles.container} ${value === 'dark' ? styles.dark : ''}`}>
             <TitleTertiary>{article.title}</TitleTertiary>
             <p className={styles.date}>{article.readable_publish_date}</p>
             <Text>{article.description}</Text>

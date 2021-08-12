@@ -2,23 +2,19 @@ import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/cardproject.module.scss';
 import { projectType } from '../types';
-import { Text } from './Typography/Text';
-import { TitleTertiary } from './Typography/Title';
+import { useTheme } from './context/Theme';
+import { Text } from './typography/Text';
+import { TitleTertiary } from './typography/Title';
 
 export const CardProject = ({ project }: { project: projectType }) => {
-  //const [stars, setStars] = useState();
-
-  // const getstars = async () => {
-  //     const response = await fetch(`https://api.github.com/repos/leopold-v/${project.title}`);
-  //     const json = await response.json();
-  //     setStars(json.stargazers_count);
-  // }
+  //@ts-ignore
+  const { value } = useTheme();
 
   return (
     <li>
       <Link href={project.link || project.github}>
         <a>
-          <div className={styles.container}>
+          <div className={`${styles.container} ${value === 'dark' ? styles.dark : ''}`}>
             <TitleTertiary>{project.title}</TitleTertiary>
             <Text>{project.description}</Text>
             <div className={styles.tech}>{project.tech}</div>

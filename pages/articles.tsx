@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from '../styles/pages/articles.module.scss';
 import { CardArticle } from '../components/CardArticle';
 import { Searchbar } from '../components/Searchbar';
-import { TitleSecondary } from '../components/Typography/Title';
+import { TitleSecondary } from '../components/typography/Title';
 
 const articles = ({ articles }: { articles: any }) => {
   const [articlesFilter, setArticlesFilter] = useState(articles.data);

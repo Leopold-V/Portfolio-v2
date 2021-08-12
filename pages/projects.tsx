@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/pages/projects.module.scss';
 import projectsList from '../public/projects.json';
 import { projectType } from '../types';
-import { TitleSecondary } from '../components/Typography/Title';
+import { TitleSecondary } from '../components/typography/Title';
 import { ProjectPresentation } from '../components/ProjectPresentation';
 
 const projects = () => {

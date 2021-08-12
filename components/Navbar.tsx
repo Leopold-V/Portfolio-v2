@@ -1,8 +1,22 @@
 import React from 'react';
 import styles from '../styles/navbar.module.scss';
 import Link from 'next/link';
+import { useTheme } from './context/Theme';
 
 export const Navbar = () => {
+  //@ts-ignore
+  const { value, setValue } = useTheme();
+
+  const handleTheme = () => {
+    if (value === 'light') {
+      localStorage.setItem('theme', 'dark');
+      setValue('dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+      setValue('light');
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.navblock}>
@@ -29,7 +43,7 @@ export const Navbar = () => {
           </li>
         </ul>
       </div>
-      <button className={styles.btn}>
+      <button className={styles.btn} onClick={handleTheme}>
         <svg
           aria-label="moon"
           width="18"
