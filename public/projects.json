@@ -34,5 +34,23 @@
     "link": "https://relaxed-shockley-e35f75.netlify.app/",
     "github": "https://github.com/Leopold-V/project-management",
     "screen": "https://i.gyazo.com/ff948a678d97872dbde1a65443b5cf4e.png"
+  },
+  {
+    "title": "Rest countries challenge",
+    "description": "A challenge from frontendmentor.io which push me to have my first experience with Vue.js",
+    "tech": "Vue.js, Css",
+    "repo_name": "rest-countries-api-challenge",
+    "link": "https://country-api-challenge.surge.sh/#/",
+    "github": "https://github.com/Leopold-V/rest-countries-api-challenge",
+    "screen": "https://i.gyazo.com/f6cc5226faad4663d22cd998480667c4.png"
+  },
+  {
+    "title": "Freehand Landing page",
+    "description": "This is a small integration of a landing page provided by figmango on dribble : https://dribbble.com/shots/12446774-Freehand-landing-page",
+    "tech": "vanilla js, Sass",
+    "repo_name": "freehand-integration",
+    "link": "https://freehand-integration.vercel.app/",
+    "github": "https://github.com/Leopold-V/freehand-integration",
+    "screen": "https://i.gyazo.com/736f97a2881dddb0267337f3b8b50630.png"
   }
 ]

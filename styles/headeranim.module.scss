@@ -1,30 +1,29 @@
 .svg {
-    position: relative;
+  position: relative;
 }
 
 .ball_red {
-    offset-path: path('M150 502 L248 440');
-    animation: ball 1.2s linear infinite;
-    }
+  offset-path: path('M150 502 L248 440');
+  animation: ball 1.2s linear infinite;
+}
 
 .ball_blue {
-    offset-path: path('M350 502 L248 440');
-    animation: ball 1.2s linear infinite;
-    }
+  offset-path: path('M350 502 L248 440');
+  animation: ball 1.2s linear infinite;
+}
 
 .ball_yellow {
-    offset-path: path('M249 519 L249 440');
-    animation: ball 1.2s linear infinite;
-    }
-        
+  offset-path: path('M249 519 L249 440');
+  animation: ball 1.2s linear infinite;
+}
 
 @keyframes ball {
-    from {
-        offset-distance: 0%;
-        opacity: 1;
-    }
-    to {
-        offset-distance: 100%;
-        opacity: 0;
-    }
+  from {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  to {
+    offset-distance: 100%;
+    opacity: 0;
+  }
 }

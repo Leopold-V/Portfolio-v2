@@ -14,11 +14,12 @@ export const CardProject = ({ project }: { project: projectType }) => {
     <li>
       <Link href={project.link || project.github}>
         <a>
-          <motion.div 
-              whileHover={{ translateY: -5, boxShadow: 'var(--primary-shadow-hover)' }}
-              whileTap={{ translateY: 0 }}
-              transition={{duration: .2}}
-          className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}>
+          <motion.div
+            whileHover={{ translateY: -5, boxShadow: 'var(--primary-shadow-hover)' }}
+            whileTap={{ translateY: 0 }}
+            transition={{ duration: 0.2 }}
+            className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}
+          >
             <TitleTertiary>{project.title}</TitleTertiary>
             <Text>{project.description}</Text>
             <div className={styles.tech}>{project.tech}</div>

@@ -22,12 +22,13 @@ export default function Home({
   return (
     <div className={styles.container}>
       {/* <Fade top> */}
-      <motion.div 
+      <motion.div
         initial="hidden"
         animate="visible"
         variants={variants}
-        transition={{duration: .8, type: 'spring'}}
-        className={styles.heading}>
+        transition={{ duration: 0.8, type: 'spring' }}
+        className={styles.heading}
+      >
         <TitlePrimary>Hey, I'm Leopold. 👋</TitlePrimary>
         <Text>
           I am a <strong>fullstack developper.</strong> I love create and build web applications. My
@@ -37,17 +38,19 @@ export default function Home({
         <HeaderAnim />
         <ul className={styles.list_network}>
           <li>
-            <motion.a 
+            <motion.a
               whileHover={{ rotate: 360 }}
               whileTap={{ scale: 0.9 }}
-              transition={{duration: .3, ease: 'linear'}}
-            className="fa fa-github fa-2x" href="https://github.com/Leopold-V"></motion.a>
+              transition={{ duration: 0.3, ease: 'linear' }}
+              className="fa fa-github fa-2x"
+              href="https://github.com/Leopold-V"
+            ></motion.a>
           </li>
           <li>
             <motion.a
               whileHover={{ rotateZ: 360 }}
               whileTap={{ scale: 0.9 }}
-              transition={{duration: .3, ease: 'linear'}}
+              transition={{ duration: 0.3, ease: 'linear' }}
               className="fa fa-linkedin fa-2x"
               href="https://www.linkedin.com/in/léopold-vertadier-953144162"
             ></motion.a>
@@ -94,7 +97,7 @@ export default function Home({
 const variants = {
   visible: { opacity: 1, y: 0 },
   hidden: { opacity: 0, y: -200 },
-}
+};
 
 export async function getStaticProps(context: any) {
   const BASE_URL = 'https://dev.to/api/articles?username=leopold';

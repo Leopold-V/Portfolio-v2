@@ -16,8 +16,9 @@ export const CardArticle = ({ article }: { article: any }) => {
           <motion.div
             whileHover={{ translateY: -5, boxShadow: 'var(--primary-shadow-hover)' }}
             whileTap={{ translateY: 0 }}
-            transition={{duration: .2}}
-          className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}>
+            transition={{ duration: 0.2 }}
+            className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}
+          >
             <TitleTertiary>{article.title}</TitleTertiary>
             <p className={styles.date}>{article.readable_publish_date}</p>
             <Text>{article.description}</Text>

@@ -19,13 +19,16 @@ const articles = ({ articles }: { articles: any }) => {
       <TitleSecondary>Articles</TitleSecondary>
       <Searchbar search={handleSearch} />
       {articles && (
-        <motion.ul 
-        initial="hidden"
-        animate="visible"
-        variants={list}
-        className={styles.list_wrapper}>
+        <motion.ul
+          initial="hidden"
+          animate="visible"
+          variants={list}
+          className={styles.list_wrapper}
+        >
           {articlesFilter.map((art: any, i: number) => (
-            <motion.div variants={item} custom={i} key={art.id}><CardArticle article={art} /></motion.div>
+            <motion.div variants={item} custom={i} key={art.id}>
+              <CardArticle article={art} />
+            </motion.div>
           ))}
         </motion.ul>
       )}
@@ -34,33 +37,34 @@ const articles = ({ articles }: { articles: any }) => {
 };
 
 const list = {
-  visible: { 
+  visible: {
     opacity: 1,
     transition: {
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.3,
     },
   },
-  hidden: { 
+  hidden: {
     opacity: 0,
     transition: {
-      when: "afterChildren",
+      when: 'afterChildren',
     },
-   },
-}
+  },
+};
 
 const item = {
-  visible: { 
-    opacity: 1, x: 0 
+  visible: {
+    opacity: 1,
+    x: 0,
   },
   hidden: (i: number) => {
     if (i % 2 === 0) {
-      return ({ opacity: 0, x: -200 })
+      return { opacity: 0, x: -200 };
     } else {
-      return ({ opacity: 0, x: +200 })
+      return { opacity: 0, x: +200 };
     }
-  }
-}
+  },
+};
 
 export async function getStaticProps(context: any) {
   const BASE_URL = 'https://dev.to/api/articles?username=leopold';
