@@ -10,7 +10,7 @@ export const ButtonPrimary = (props: any) => {
         boxShadow: 'var(--primary-shadow-hover)',
         backgroundColor: 'var(--primary-color-hover)',
       }}
-      whileTap={{ translateY: 0 }}
+      whileTap={{ translateY: 0, boxShadow: 'var(--primary-shadow)' }}
       transition={{ duration: 0.2 }}
       className={styles.btn}
       {...props}

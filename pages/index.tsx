@@ -1,8 +1,6 @@
 import styles from '../styles/pages/index.module.scss';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-//@ts-ignore
-import Fade from 'react-reveal/Fade';
 import projects from '../public/projects.json';
 import { projectType } from '../types';
 import { Text } from '../components/Typography/Text';
@@ -10,7 +8,6 @@ import { TitlePrimary, TitleSecondary } from '../components/Typography/Title';
 import { ButtonPrimary } from '../components/ButtonPrimary';
 import { CardArticle } from '../components/CardArticle';
 import { CardProject } from '../components/CardProject';
-import { HeaderAnim } from '../components/HeaderAnim';
 
 export default function Home({
   articles,
@@ -21,7 +18,6 @@ export default function Home({
 }) {
   return (
     <div className={styles.container}>
-      {/* <Fade top> */}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -29,13 +25,12 @@ export default function Home({
         transition={{ duration: 0.8, type: 'spring' }}
         className={styles.heading}
       >
-        <TitlePrimary>Hey, I'm Leopold. 👋</TitlePrimary>
+        <TitlePrimary>Hey, I'm Leopold</TitlePrimary>
         <Text>
           I am a <strong>fullstack developper.</strong> I love create and build web applications. My
           main expertises are in Javascript technologies : <strong>React, Node, electron...</strong>
         </Text>
         <ButtonPrimary href="CV_Leopold.pdf">Resume</ButtonPrimary>
-        <HeaderAnim />
         <ul className={styles.list_network}>
           <li>
             <motion.a
@@ -57,7 +52,6 @@ export default function Home({
           </li>
         </ul>
       </motion.div>
-      {/* </Fade> */}
       <section>
         <div className={styles.content_section}>
           <div className={styles.article_title}>
