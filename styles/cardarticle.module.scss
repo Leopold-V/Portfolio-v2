@@ -10,11 +10,6 @@
   margin: 1rem 0;
   cursor: pointer;
   box-shadow: var(--primary-shadow);
-  transition: all 0.3s;
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--primary-shadow-hover);
-  }
   & h3 {
     color: var(--color-hover-text);
   }

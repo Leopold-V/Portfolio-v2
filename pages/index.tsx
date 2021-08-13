@@ -1,5 +1,8 @@
 import styles from '../styles/pages/index.module.scss';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+//@ts-ignore
+import Fade from 'react-reveal/Fade';
 import projects from '../public/projects.json';
 import { projectType } from '../types';
 import { Text } from '../components/Typography/Text';
@@ -7,6 +10,7 @@ import { TitlePrimary, TitleSecondary } from '../components/Typography/Title';
 import { ButtonPrimary } from '../components/ButtonPrimary';
 import { CardArticle } from '../components/CardArticle';
 import { CardProject } from '../components/CardProject';
+import { HeaderAnim } from '../components/HeaderAnim';
 
 export default function Home({
   articles,
@@ -17,25 +21,40 @@ export default function Home({
 }) {
   return (
     <div className={styles.container}>
-      <div className={styles.heading}>
+      {/* <Fade top> */}
+      <motion.div 
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{duration: .8, type: 'spring'}}
+        className={styles.heading}>
         <TitlePrimary>Hey, I'm Leopold. 👋</TitlePrimary>
         <Text>
           I am a <strong>fullstack developper.</strong> I love create and build web applications. My
           main expertises are in Javascript technologies : <strong>React, Node, electron...</strong>
         </Text>
         <ButtonPrimary href="CV_Leopold.pdf">Resume</ButtonPrimary>
+        <HeaderAnim />
         <ul className={styles.list_network}>
           <li>
-            <a className="fa fa-github fa-2x" href="https://github.com/Leopold-V"></a>
+            <motion.a 
+              whileHover={{ rotate: 360 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{duration: .3, ease: 'linear'}}
+            className="fa fa-github fa-2x" href="https://github.com/Leopold-V"></motion.a>
           </li>
           <li>
-            <a
+            <motion.a
+              whileHover={{ rotateZ: 360 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{duration: .3, ease: 'linear'}}
               className="fa fa-linkedin fa-2x"
               href="https://www.linkedin.com/in/léopold-vertadier-953144162"
-            ></a>
+            ></motion.a>
           </li>
         </ul>
-      </div>
+      </motion.div>
+      {/* </Fade> */}
       <section>
         <div className={styles.content_section}>
           <div className={styles.article_title}>
@@ -70,6 +89,11 @@ export default function Home({
       </section>
     </div>
   );
+}
+
+const variants = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -200 },
 }
 
 export async function getStaticProps(context: any) {

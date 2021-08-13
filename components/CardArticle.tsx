@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/cardarticle.module.scss';
@@ -12,7 +13,11 @@ export const CardArticle = ({ article }: { article: any }) => {
     <li className={styles.wrapper}>
       <Link href={article.url}>
         <a>
-          <div className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}>
+          <motion.div
+            whileHover={{ translateY: -5, boxShadow: 'var(--primary-shadow-hover)' }}
+            whileTap={{ translateY: 0 }}
+            transition={{duration: .2}}
+          className={`${styles.container} ${theme?.value === 'dark' ? styles.dark : ''}`}>
             <TitleTertiary>{article.title}</TitleTertiary>
             <p className={styles.date}>{article.readable_publish_date}</p>
             <Text>{article.description}</Text>
@@ -34,7 +39,7 @@ export const CardArticle = ({ article }: { article: any }) => {
                 <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
               </svg>
             </div>
-          </div>
+          </motion.div>
         </a>
       </Link>
     </li>

@@ -3,6 +3,7 @@ import styles from '../styles/pages/articles.module.scss';
 import { CardArticle } from '../components/CardArticle';
 import { Searchbar } from '../components/Searchbar';
 import { TitleSecondary } from '../components/Typography/Title';
+import { motion } from 'framer-motion';
 
 const articles = ({ articles }: { articles: any }) => {
   const [articlesFilter, setArticlesFilter] = useState(articles.data);
@@ -18,15 +19,48 @@ const articles = ({ articles }: { articles: any }) => {
       <TitleSecondary>Articles</TitleSecondary>
       <Searchbar search={handleSearch} />
       {articles && (
-        <ul className={styles.list_wrapper}>
-          {articlesFilter.map((art: any) => (
-            <CardArticle key={art.id} article={art} />
+        <motion.ul 
+        initial="hidden"
+        animate="visible"
+        variants={list}
+        className={styles.list_wrapper}>
+          {articlesFilter.map((art: any, i: number) => (
+            <motion.div variants={item} custom={i} key={art.id}><CardArticle article={art} /></motion.div>
           ))}
-        </ul>
+        </motion.ul>
       )}
     </div>
   );
 };
+
+const list = {
+  visible: { 
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+  hidden: { 
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+   },
+}
+
+const item = {
+  visible: { 
+    opacity: 1, x: 0 
+  },
+  hidden: (i: number) => {
+    if (i % 2 === 0) {
+      return ({ opacity: 0, x: -200 })
+    } else {
+      return ({ opacity: 0, x: +200 })
+    }
+  }
+}
 
 export async function getStaticProps(context: any) {
   const BASE_URL = 'https://dev.to/api/articles?username=leopold';

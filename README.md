@@ -1,6 +1,8 @@
-- scss weird loading sometimes
 - svg animation
 
 fix :
 
-- button dark mode overflow on small phone
+- replace font awesome by svg
+- sitemap
+- robots.tsx
+- contrast color
