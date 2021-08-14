@@ -13,6 +13,7 @@
 .navblock {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .navlist {
@@ -27,19 +28,24 @@
   cursor: pointer;
   transition: all 0.3s;
   position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 4px;
-    background: var(--primary-color);
-    transition: all 0.3s;
+  z-index: 1000;
+}
+
+.navitem_wrapper {
+  position: relative;
+  &:hover svg {
+    stroke-dashoffset: 0;
   }
-  &:hover::after {
-    width: 100%;
-  }
+}
+
+.nav_circle {
+  position: absolute;
+  cursor: pointer;
+  top: -.7rem;
+  left: -.6rem;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  transition: all .5s;
 }
 
 .btn {
