@@ -90,8 +90,8 @@ export const Navbar = () => {
             </Link>
           </li>
           <li className={styles.navitem_wrapper}>
-            <Link href="/skills">
-              <a className={styles.navitem}>skills
+            <Link href="/about">
+              <a className={styles.navitem}>About
               <svg
               className={styles.nav_circle}
               width="78"
