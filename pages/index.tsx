@@ -25,7 +25,7 @@ export default function Home({
         transition={{ duration: 0.8, type: 'spring' }}
         className={styles.heading}
       >
-        <TitlePrimary>Hey, I'm Leopold</TitlePrimary>
+        <TitlePrimary>Hi, I'm Leopold</TitlePrimary>
         <Text>
           I am a <strong>fullstack developper.</strong> I love create and build web applications. My
           main expertises are in Javascript technologies : <strong>React, Node, electron...</strong>

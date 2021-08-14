@@ -8,7 +8,7 @@ export const ButtonPrimary = (props: any) => {
       whileHover={{
         translateY: -5,
         boxShadow: 'var(--primary-shadow-hover)',
-        opacity: 0.8
+        opacity: 0.8,
       }}
       whileTap={{ translateY: 0, boxShadow: 'var(--primary-shadow)', opacity: 1 }}
       transition={{ duration: 0.2 }}
