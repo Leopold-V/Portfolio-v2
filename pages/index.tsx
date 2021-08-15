@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import styles from '../styles/pages/index.module.scss';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -8,6 +9,8 @@ import { TitlePrimary, TitleSecondary } from '../components/Typography/Title';
 import { ButtonPrimary } from '../components/ButtonPrimary';
 import { CardArticle } from '../components/CardArticle';
 import { CardProject } from '../components/CardProject';
+import gsap from 'gsap';
+import { Bounce } from 'gsap/dist/gsap';
 
 export default function Home({
   articles,
@@ -16,13 +19,17 @@ export default function Home({
   articles: any;
   projectsList: projectType[];
 }) {
+
+  const heading_ref = useRef(null);
+
+  useEffect(() => {
+    gsap.from(heading_ref.current, { y: -200, opacity: 0, ease:  Bounce.easeOut, duration: 1})
+  }, [])
+
   return (
     <div className={styles.container}>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={variants}
-        transition={{ duration: 0.8, type: 'spring' }}
+      <div
+        ref={heading_ref}
         className={styles.heading}
       >
         <TitlePrimary>Hi, I'm Leopold</TitlePrimary>
@@ -51,7 +58,7 @@ export default function Home({
             ></motion.a>
           </li>
         </ul>
-      </motion.div>
+      </div>
       <section>
         <div className={styles.content_section}>
           <div className={styles.article_title}>
