@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <div className={styles.container}>
-        <TitleSecondary>The technologies I work with :</TitleSecondary>
+        <TitleSecondary>Technologies I work with :</TitleSecondary>
       </div>
       <Techs />
     </>
